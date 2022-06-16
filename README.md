@@ -1,14 +1,18 @@
 # dump_digger
 
-TODO: Write a description here
+Ruby memory dump analyzer
 
 ## Installation
 
-TODO: Write installation instructions here
+`shards build --production`
 
 ## Usage
 
-TODO: Write usage instructions here
+`bin/dump_digger /path/to/memory.dump`
+
+To store desired segments into reports:
+
+`bin/dump_digger /path/to/memory.dump 15 16 17 18`
 
 ## Development
 
