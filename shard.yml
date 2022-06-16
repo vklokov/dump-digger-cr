@@ -1,0 +1,13 @@
+name: dump_digger
+version: 0.1.0
+
+authors:
+  - Vladimir Klokov <vklokov@xometry.de>
+
+targets:
+  dump_digger:
+    main: src/dump_digger.cr
+
+crystal: 1.4.1
+
+license: MIT
