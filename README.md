@@ -1,6 +1,6 @@
 # dump_digger
 
-TODO: Write a description here
+Ruby memory dump analyzer
 
 ## Installation
 
