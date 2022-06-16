@@ -8,11 +8,11 @@ Ruby memory dump analyzer
 
 ## Usage
 
-`bin/dump_digger /path/to/memory.dump`
+`bin/dump_digger -f /path/to/memory.dump`
 
 To store desired segments into reports:
 
-`bin/dump_digger /path/to/memory.dump 15 16 17 18`
+`bin/dump_digger -f /path/to/memory.dump -g "15 16 17 18"`
 
 ## Development
 
