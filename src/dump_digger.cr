@@ -6,15 +6,17 @@ require "./dump_digger/analyzer"
 require "./dump_digger/logger"
 
 module DumpDigger
-  class Main
-    def self.version
-      puts "DumpDigger version #{DumpDigger::VERSION}"
-    end
+  def self.version
+    DumpDigger::VERSION
+  end
+
+  def self.analyzer(filename : String, gens : Array(String))
+    DumpDigger::Analyzer.new(filename, gens)
   end
 end
 
-filename : String = ""
-generations : Array(String) = [] of String
+filename = ""
+generations = [] of String
 
 OptionParser.parse do |opts|
   opts.on("-f FILENAME", "--filename FILENAME", "Set filename") do |name|
@@ -30,6 +32,6 @@ OptionParser.parse do |opts|
   end
 end
 
-instance = DumpDigger::Analyzer.new(filename, generations)
+instance = DumpDigger.analyzer(filename, generations)
 instance.analyze
 instance.segment_result
